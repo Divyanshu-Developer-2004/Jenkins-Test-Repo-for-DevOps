@@ -17,7 +17,9 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'mvn clean compile'
+                dir('IEM_Jenkins_Project') {
+                    bat 'mvn clean compile'
+                }
             }
          
          
@@ -25,7 +27,9 @@ pipeline {
 
         stage('Run JUnit Tests') {
             steps {
-                bat 'mvn test'
+                dir('IEM_Jenkins_Project') {
+                    bat 'mvn test'
+                }
             }
         }
 
