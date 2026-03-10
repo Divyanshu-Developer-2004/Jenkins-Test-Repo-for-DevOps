@@ -35,8 +35,10 @@ pipeline {
 
        stage('SonarQube Analysis') {
           steps {
-          withSonarQubeEnv('SonarServer') {
-            bat 'mvn clean verify sonar:sonar'
+         dir('IEM_Jenkins_Project') {
+            withSonarQubeEnv('SonarServer') {
+                bat 'mvn clean verify sonar:sonar'
+            }
         }
     }
 }
