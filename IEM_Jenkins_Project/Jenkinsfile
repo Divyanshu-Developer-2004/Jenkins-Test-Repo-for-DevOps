@@ -11,7 +11,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-             git branch: 'main',url: 'https://github.com/Divyanshu-Developer-2004/Jenkins-Test-Repo-for-DevOps'
+             git branch: 'master',url: 'https://github.com/Divyanshu-Developer-2004/Jenkins-Test-Repo-for-DevOps'
             }
         }
 
